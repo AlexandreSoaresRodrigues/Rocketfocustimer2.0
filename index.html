@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="Pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo de foco</title>
+
+    <meta name="description" content="Temporizador pomodor tipo">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+       <button id="toggle-mode">
+        <span class="sr-only">Ativar light mode</span>
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon"></i>
+       </button>
+        
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            
+            <button data-action='toggleRunning' class="ph-bold ph-play-circle"></button>
+            <span class="sr-only">Iniciar contador</span>
+
+            <button data-action='toggleRunning' class="ph-bold ph-pause-circle"></button>
+            <span class="sr-only">Pausar contador</span>
+
+            <button
+              data-action="set"
+             class="ph ph-timer secondary">
+                <span class="sr-only">Ajustar contador</span>
+            </button>
+            <button
+            data-action="reset"
+             class="ph ph-stop-circle">
+                <span class="sr-only">Reiniciar contador</span>
+            </button>
+            
+            <button data-action="IncreaseTime" class="ph-bold ph-plus-circle"></button>
+            <span class="sr-only">Aumente em 5  minutos o tempo do timer</span>
+
+            <button data-action="DecreaseTime" class="ph-bold ph-minus-circle"></button>
+            <span class="sr-only">diminui  5 minutos o tempo do timer</span>
+
+        </section>
+    </div>
+    <div class="Cards">
+
+        <section id="Toggle-sound">
+        <button data-action="toggleForest" class="ph-bold ph-tree"></button>
+        <span class="sr-only">Som de Floresta</span>
+        <button data-action="toggleRain" class="ph-bold ph-cloud-rain"></button>
+        <span class="sr-only">Som de chuva</span>
+        <button data-action="toggleCoffeshopTimer" class="ph-bold ph-warehouse"></button>
+        <span class="sr-only">Som de cafeteria</span>
+        <button data-action="toggleFirePlace" class="ph-bold ph-flame"></button>
+        <span class="sr-only">Som de Lareira</span>
+    </section>
+
+        </div>
+</body>
+</html>
