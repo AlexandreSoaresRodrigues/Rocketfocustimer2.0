@@ -25,12 +25,10 @@ export function set() {
     el.minutes.focus()
    }
 
-   export function add() {
-    el.btnplus.addEventListener('click', function(){
-      minutes = minutes + 5
-      timer.updateDisplay(minutes,0)
-  })
-   
-  }
+export function IncreaseTime () {
+    
+}
 
-
+export function DecreaseTime () {
+    
+}
